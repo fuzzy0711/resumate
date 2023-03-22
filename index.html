@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Resume Generator</title>
+</head>
+<body>
+    <!-- html code  -->
+<div class="container" id="cv-form">
+    <h1 class="text-center my-2">RESUMATE</h1>
+    <p class="text-center">One Stop Solution to generate your Resume</p>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- first col -->
+            <h3>Personal Information</h3>
+
+        <div class="form-group">
+            <label for="nameField">Name</label>
+            <input type="text" id="nameField" placeholder="Enter your Name" class="form-control"/>
+        </div>
+
+
+        <div class="form-group mt-2">
+            <label for="emailField">Email-id</label>
+            <input type="text" id="emailField" placeholder="Enter your Email-id" class="form-control"/>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="contactField">Contact</label>
+            <input type="text" id="contactField" placeholder="Enter your Mobile Number" class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="addressField">Residential Address</label>
+            <textarea  id="addressField" placeholder="Enter your address" class="form-control" rows="2"></textarea>
+        </div>
+    
+        <div class="form-group mt-3">
+            <label for="">Select Your Profile Picture</label>
+            <input id="imgField" type="file" class="form-control">
+        </div>
+
+        <h4 class="text-secondary mt-3">Profile URL</h4>
+
+        <div class="form-group">
+            <label for="linkedinField">LinkedIn URL</label>
+            <input type="text" id="linkedinField" placeholder="Enter here" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label for="githubField">GitHub URL</label>
+            <input type="text" id="githubField" placeholder="Enter here" class="form-control"/>
+        </div>
+
+        </div>
+        <div class="col-md-6 mt-2">
+            <!-- second col -->
+            <h3>Professional Information</h3>
+
+            <div class="form-group mt-2">
+                <label for="">Objective</label>
+                <textarea id="objectiveField" placeholder="Enter here" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group mt-2" id="we">
+                <label for="">Work Experience</label>
+                <textarea placeholder="Enter here" class="form-control weField"></textarea>
+                    <!-- new text area  -->
+                <div class="container text-center mt-2" id="weAddButton">
+                    <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
+
+            <div class="form-group mt-2" id="aq">
+                <label for="">Academic Qualification</label>
+                <textarea placeholder="Enter here" class="form-control aqField"></textarea>
+
+                <div class="container text-center mt-2" id="aqAddButton">
+                    <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="container text-center mt-2">
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+    </div>
+
+
+    <form action="">
+        <div class="input-wrapper text-center mt-5">
+            <h3>Get Your Resume</h3>
+          <input type="email" name="email_address" aria-label="email" placeholder="Enter your email address" required
+            class="email-field">
+          <ion-icon name="mail-open-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <div class="container text-center mt-2">
+            <button class="btn btn-primary btn-lg">Mail Me</button>
+        </div>
+</form>
+
+</div>
+
+<!-- cv template -->
+<div class="container" id="cv-template">
+    <div class="row">
+        <div class="col-md-4 text-center py-5 background">
+        <!-- first col -->
+        <img src="https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg" 
+        alt="" class="img-fluid myimg" id="imgTemplate"/>
+
+        <div class="container">
+            <p id="nameT1">Your Name</p>
+            <p id="contactT">Your Contact</p>
+            <p id="addressT">Your Address</p>
+            <p id="emailT">Your Email</p>
+            <hr />
+            <h4>Profile URL</h4>
+            <p><a id="linkedinT" href="#1">LinkedIn URL</a></p>
+            <p><a id="githubT" href="#2">GitHub URL</a></p>
+        </div>
+        </div>
+        <div class="col-md-8 py-5 ">
+        <!-- second col -->
+        <h1 id="nameT2" class="text-center" style="font-weight: 980">Your Name</h1>
+
+        <!-- objective card -->
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+                <p id="objectiveT">Enter Your Objective for the Role</p>
+            </div>
+        </div>
+
+        <!-- work experience -->
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Work Experience</h3>
+            </div>
+            <div class="card-body">
+                <ul id="weT">
+                    <li>Enter your Work Experience</li>
+                    <li>Enter your Work Experience</li>
+                    <li>Enter your Work Experience</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- academic qualification -->
+
+        <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+                <ul id="aqT">
+                    <li>Enter your Work Academic Qualification</li>
+                    <li>Enter your Work Academic Qualification</li>
+                    <li>Enter your Work Academic Qualification</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mt-3 text-center">
+            <button onclick="printPortfolio()" class="btn background">
+                Print Portfolio
+            </button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
