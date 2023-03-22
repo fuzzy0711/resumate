@@ -1,31 +1,85 @@
+// function addNewWEField(){
+//     let newNode=document.createElement('textarea');
+//     newNode.classList.add("form-control");
+//     newNode.id="new";
+//     newNode.classList.add("weField");
+//     newNode.classList.add("mt-2");
+//     newNode.setAttribute("rows",3);
+//     newNode.setAttribute("placeholder","Enter here");
+
+//     let weOb=document.getElementById("we");
+//     let weAddButtonOb=document.getElementById("weAddButton");
+
+//     weOb.insertBefore(newNode,weAddButtonOb);
+// }
+
+let i=0
+let j=0
+const divWrapper = document.getElementById("we");
+const divWrapper2 = document.getElementById("aq");
+
 function addNewWEField(){
+    i=i+1
+    let inputWrapper = document.createElement('div');
+    inputWrapper.id="new-we-${i}";
     let newNode=document.createElement('textarea');
     newNode.classList.add("form-control");
     newNode.classList.add("weField");
     newNode.classList.add("mt-2");
     newNode.setAttribute("rows",3);
     newNode.setAttribute("placeholder","Enter here");
+    inputWrapper.appendChild(newNode)
+    
+    const removeButton = document.createElement('button');
+    removeButton.classList.add("btn")
+    removeButton.classList.add("btn-primary")
+    removeButton.classList.add("btn-sm")
+    removeButton.innerHTML = 'Remove';
+    removeButton.onclick = () => { 
+        divWrapper.removeChild(inputWrapper)
+    }
+    inputWrapper.appendChild(removeButton);
+    divWrapper.appendChild(inputWrapper);
+  }
 
-    let weOb=document.getElementById("we");
-    let weAddButtonOb=document.getElementById("weAddButton");
+// function addNewAQField(){
+//     let newNode=document.createElement("textarea");
+//     newNode.classList.add("form-control");
+//     newNode.classList.add("aqField");
+//     newNode.classList.add("mt-2");
+//     newNode.setAttribute("rows",3);
+//     newNode.setAttribute("placeholder","Enter here");
 
-    weOb.insertBefore(newNode,weAddButtonOb);
-}
+//     let aqOb=document.getElementById("aq");
+//     let aqAddButtonOb=document.getElementById("aqAddButton");
+
+//     aqOb.insertBefore(newNode,aqAddButtonOb);
+
+// }
 
 function addNewAQField(){
-    let newNode=document.createElement("textarea");
+    i=i+1
+    let inputWrapper = document.createElement('div');
+    inputWrapper.id="new-aq-${i}";
+    let newNode=document.createElement('textarea');
     newNode.classList.add("form-control");
     newNode.classList.add("aqField");
     newNode.classList.add("mt-2");
     newNode.setAttribute("rows",3);
     newNode.setAttribute("placeholder","Enter here");
-
-    let aqOb=document.getElementById("aq");
-    let aqAddButtonOb=document.getElementById("aqAddButton");
-
-    aqOb.insertBefore(newNode,aqAddButtonOb);
-
-}
+    inputWrapper.appendChild(newNode)
+    
+    const removeButton = document.createElement('button');
+    removeButton.classList.add("btn")
+    removeButton.classList.add("btn-primary")
+    removeButton.classList.add("btn-sm")
+    removeButton.innerHTML = 'Remove';
+    removeButton.onclick = () => { 
+        divWrapper2.removeChild(inputWrapper)
+    }
+    inputWrapper.appendChild(removeButton);
+    divWrapper2.appendChild(inputWrapper);
+  }
 
 //generating cv
 function generateCV(){
