@@ -1,3 +1,22 @@
+*{
+    font-family: 'Baloo Bhai 2', cursive;
+    /* background-color: #594545; */
+    /* color: #FFF8EA;  */
+    color: black;
+}
+
+h3{
+    /* background-color: #594545; */
+}
+
+input{
+    background-color: #fff8ea;
+}
+
+.btn{
+    color:#fff8ea;
+}
+
 #cv-form{
     /* display:none; */
 }
@@ -9,8 +28,57 @@
 .myimg{
     border-radius: 50%;
     width:200px;
+    height: 200px;
+}
+
+.btn:active{
+    color: red;
+
+}
+
+.mailbtn{
+    background-color: #214040;
+    color: #fff8ea;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 20px;
+    border-radius: 7px;
+ 
+}
+.mailbtn:hover{
+    background-color: #1b3838;
+    color: #fff8ea;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 20px;
+    border-radius: 7px;
+ 
 }
 
 .background{
-    background-color: aqua;
+    background-color: #214040;
+}
+
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #1b3838;
+    border-color: #214040;
+}
+.btn {
+    color: var(--bs-btn-hover-color);
+    background-color: #214040;
+    border-color: #214040;
+}
+
+#addbt:hover {
+    background-color: #1b3838;
+    border-color: #1b3838;
 }

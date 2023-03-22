@@ -35,6 +35,7 @@ function addNewWEField(){
     removeButton.classList.add("btn-primary")
     removeButton.classList.add("btn-sm")
     removeButton.innerHTML = 'Remove';
+    removeButton.style.marginTop = '8px';
     removeButton.onclick = () => { 
         divWrapper.removeChild(inputWrapper)
     }
@@ -74,6 +75,7 @@ function addNewAQField(){
     removeButton.classList.add("btn-primary")
     removeButton.classList.add("btn-sm")
     removeButton.innerHTML = 'Remove';
+    removeButton.style.marginTop = '8px';
     removeButton.onclick = () => { 
         divWrapper2.removeChild(inputWrapper)
     }
@@ -151,3 +153,5 @@ function generateCV(){
 function printPortfolio(){
     window.print();
 }
+
+document.getElementById("mailing").write('<a class="btn" href="mailto:fuzailmalik2000@gmail.com">MAIL ME</a>')
