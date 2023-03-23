@@ -129,6 +129,9 @@ function generateCV(){
 
     document.getElementById("aqT").innerHTML=str1;
 
+    //skills
+    document.getElementById("skillsT").innerHTML=document.getElementById("skillsField").value;
+
     // code for setting image
     let file=document.getElementById("imgField").files[0];
     console.log(file);
