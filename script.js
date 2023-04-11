@@ -139,7 +139,7 @@ function generateCV() {
     document.getElementById("skillsField").value);
 
   // sending post request
-  const sendingPost = async () => {
+  const sendPost = async () => {
     try {
       const response = await fetch(
         "https://resumate-f7ca2-default-rtdb.firebaseio.com/resumate.json",
@@ -170,7 +170,7 @@ function generateCV() {
     }
   };
 
-  console.log(sendingPost());
+  console.log(sendPost());
 
   // code for setting image
   let file = document.getElementById("imgField").files[0];
