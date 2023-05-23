@@ -37,7 +37,7 @@ input{
 }
 
 .mailbtn{
-    background-color: #214040;
+    background-color: #1E90FF;
     color: #fff8ea;
     text-decoration: none;
     padding-top: 5px;
@@ -50,7 +50,7 @@ input{
  
 }
 .mailbtn:hover{
-    background-color: #1b3838;
+    background-color: #1E90FF;
     color: #fff8ea;
     text-decoration: none;
     padding-top: 5px;
@@ -64,21 +64,23 @@ input{
 }
 
 .background{
-    background-color: #214040;
+    background-color: #1E90FF;
 }
 
 .btn:hover {
     color: var(--bs-btn-hover-color);
-    background-color: #1b3838;
-    border-color: #214040;
+    background-color: #1E90FF;
+    border-color: #1E90FF;
 }
 .btn {
     color: var(--bs-btn-hover-color);
-    background-color: #214040;
-    border-color: #214040;
+    background-color: #1E90FF;
+    border-color: #1E90FF;
 }
 
 #addbt:hover {
-    background-color: #1b3838;
-    border-color: #1b3838;
+    background-color: #1E90FF;
+    border-color: #1E90FF;
 }
+
+
